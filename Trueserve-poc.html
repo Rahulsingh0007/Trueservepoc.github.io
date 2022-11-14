@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrueServe Contact Center Solution</title>
+</head>
+<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@800&family=IBM+Plex+Mono:ital@1&family=IBM+Plex+Sans:ital,wght@0,700;1,700&family=Oswald&display=swap" rel="stylesheet">
+
+<style>
+    body {
+        margin: 0px;
+        padding: 0px;
+        /* background: url('Fitness-free-hd-wallpapers.jpg');
+        height: 1000px; */
+        /* background-color: rgb(215, 81, 81); */
+        color: rgb(12, 12, 12);
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: small;
+    }
+
+    .left{
+    display: inline-block;
+    /* border: 1px solid wheat; */
+    padding: -10px;
+    margin: 0px -20px;
+    }
+    .left img{
+        width: 130px;
+        text-align: center;
+    }
+    .center {
+        /* border: 1px solid rgb(234, 234, 17); */
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    .right {
+        top: 10px;
+        left: 1040px;
+        display: inline-block;
+        /* border: 1px solid greenyellow; */
+        display: flex;
+        justify-content: space-between;
+
+    }
+    .btn{
+        margin: 4px 10px;
+        color: white;
+        background-color:black;
+        padding: 3px 5px;
+        cursor: pointer;
+        font: size 10px;
+        border-radius: 5px;
+        font-family: 'IBM Plex Mono', monospace;
+    }
+    .btn:hover{
+        background-color: rgb(222, 21, 21);
+    }
+
+    .center{
+        display: inline-block;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .center li a{
+        display: inline-block;
+        color: black;
+        text-decoration: none;
+        padding:  4px 23px;
+    }
+    .navbar{
+        display: flex;
+        list-style: none;
+        font-size: 16px;
+        font-weight: bold;
+        
+    }
+    .navbar li a:hover{
+    display: inline-block;
+    color: rgb(222, 21, 21);
+    text-decoration: none;
+    text-decoration: underline;
+  }
+
+    .heading {
+        margin: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .container h4{
+        text-align: center;
+    } 
+    .container{
+        border: 3px solid gray;
+        padding: 10px 10px;
+        margin: 50px 50px;
+        width: 39%;
+        border-radius: 5px;
+
+     }
+    .form-group input{
+        text-align: center auto;
+        display: block;
+        padding: 7px;
+        margin: 5px;
+        /* border: 2px solid rgb(185, 12, 12); */
+        width: 60%;
+        border-radius: 5px;
+     }
+    .form-group btn{ 
+        text-align: center;
+        display: block;
+        margin:auto;
+        width: 30%;
+     }
+     /* .left:hover{
+    color: rgb(222, 21, 21);
+    text-decoration: none;
+    text-decoration: underline;
+
+     } */
+     header::before{
+            background: url('https://source.unsplash.com/1600x900/?Technology,callcenter,Agent') no-repeat center center/cover;
+            content: "";
+            position: absolute;
+            top:0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.5;
+        }
+</style>
+
+<body>
+    <header class="heading">
+    <!-- for left pannel setting for logo -->
+    <div class="left">
+        <img src="download.png" alt="" width="110" height="90">
+        <div> <h3>TrueServe CAI</h3></div>
+        </div>
+        <!-- for Center pannel setting for navbar -->
+        <div class="center">
+            <ul class="navbar">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Artificial Intelligence</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <!-- for Right pannel setting for buttons -->
+        <div class="right">
+            <button class="btn">Call-us-Now</button>
+            <button class="btn">Email</button>
+
+
+        </div>
+    </header>
+<div class="container">
+    <h4>
+    "Start Working with Advance Contact center CAI"<br>
+    Register now.. to working with us
+    </h4>
+        <form action="backed.php">
+            <div class="form-group">
+                <input type="text" name="" placeholder ="Enter your name">
+                <div><input type="text" name="" placeholder ="Enter your Age"></div>
+                <div><input type="text" name="" placeholder ="Enter your City Name"></div>
+                <div><input type="text" name="" placeholder ="Enter your Gender"></div>
+                <div><input type="text" name="" placeholder ="Enter your Phone number"></div>
+                <div><input type="text" name="" placeholder ="Enter your Email-id"></div><br>
+                <Button class="btn">Submit</Button>
+            </div>
+
+
+
+        </form>
+</div>
+
+<script type="text/javascript">
+    (function(w, d, x, id){
+      s=d.createElement('script');
+      s.src='https://dg9yx063wiiht.cloudfront.net/amazon-connect-chat-interface-client.js';
+      s.async=1;
+      s.id=id;
+      d.getElementsByTagName('head')[0].appendChild(s);
+      w[x] =  w[x] || function() { (w[x].ac = w[x].ac || []).push(arguments) };
+    })(window, document, 'amazon_connect', '8a3fbe96-a904-42ad-821c-a586f705b3ff');
+    amazon_connect('styles', { openChat: { color: '#ffffff', backgroundColor: '#123456'}, closeChat: { color: '#ffffff', backgroundColor: '#123456'} });
+    amazon_connect('snippetId', 'QVFJREFIaW80NEppRGNKMjg1T0xNN2M5djJLZkVBUmFXNVlJeW5VM3RXSDRmMU9zb0FGak1BZUUyTHVJQk5KZUlSS1hzY04rQUFBQWJqQnNCZ2txaGtpRzl3MEJCd2FnWHpCZEFnRUFNRmdHQ1NxR1NJYjNEUUVIQVRBZUJnbGdoa2dCWlFNRUFTNHdFUVFNMDBxMTBPcFpCVi9oazc4Q0FnRVFnQ3QzdlNkTFlidFFxQkdVRDNJYlVoLzJValg1QTBBOHBCbWNDUjZLSUVkSE1LTzVkeERRNTlhUThNMS86OmlwVWM3ZVNXZ09wYUp4ci81YzltL1gyeGorNE13STBXZnVhd2VSR3d1Y28vTzFaVis4N2ZsK2hncFIrdnBTTHZ2UVNyb0s5NjFkRE5KRFhGb2RCZSt1U2pra0tGV3ZDUVcwdCt2WWpzcFlJZTlyeXNIYmlFdjZNdGs2V1JxUHBVN3daSUxUQmJlYUs3Q3ZvK1RaYjhPQ0UrSGhXWE5Faz0=');
+    amazon_connect('supportedMessagingContentTypes', [ 'text/plain', 'text/markdown' ]);
+  </script>
+
+</body>
+</html>
