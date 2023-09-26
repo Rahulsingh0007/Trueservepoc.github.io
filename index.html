@@ -188,7 +188,6 @@
     //check the console for date click event
     //Fixed day highlight
     //Added previous month and next month view
-
     function CalendarControl() {
       // alert("hi")
       const calendar = new Date();
@@ -233,10 +232,19 @@
           ).getDate();
           return lastDate;
         },
-        // navigateToPreviousMonth: function () {
-        //   calendar.setMonth(calendar.getMonth() - 1);
-        //   calendarControl.attachEventsOnNextPrev();
-        // },
+        navigateToPreviousMonth: function () {
+          let currentMonth = calendarControl.localDate.getMonth();
+          let currentYear = calendarControl.localDate.getFullYear();
+          console.log("check for current month", currentMonth, currentYear)
+          console.log("checking for calendar month 240", calendar.getMonth(), calendar.getFullYear())
+          if(currentYear < calendar.getFullYear()) {
+            calendar.setMonth(calendar.getMonth() - 1);
+            calendarControl.attachEventsOnNextPrev();
+          }else if(currentMonth < calendar.getMonth()){
+            calendar.setMonth(calendar.getMonth() - 1);
+            calendarControl.attachEventsOnNextPrev();
+          }
+        },
         navigateToNextMonth: function () {
           calendar.setMonth(calendar.getMonth() + 1);
           calendarControl.attachEventsOnNextPrev();
@@ -395,7 +403,6 @@
             document.querySelectorAll(".number-item")
           ) {
             // alert(calendarControl.firstDay().getDate() )
-            
             document
               .querySelectorAll(".number-item")
               [i - 1].innerHTML = i;
@@ -403,9 +410,7 @@
               .querySelectorAll(".number-item")
               [i - 1].classList.add("prev-dates");
           }
-
           }
-
         },
         plotPrevMonthDates: function (dates) {
           dates.reverse();
@@ -452,7 +457,6 @@
       };
       calendarControl.init();
     }
-
     const calendarControl = new CalendarControl();
   </script>
 </html>
